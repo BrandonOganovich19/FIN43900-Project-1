@@ -12,12 +12,12 @@ Edition A (ACN-2026-09-03.md) was submitted at the Brightspace checkpoint on [da
 
 | Work | AI tool (as disclosed) | What the AI did | What I did or verified | Record |
 | --- | --- | --- | --- | --- |
-| Edition A memo (Sep 3) | ChatGPT / Codex | Drafted the memo from my Lab 03 session | Gathered and verified sources; made the watch-defer call and wrote the triggers | ACN-2026-09-03.md L377 |
-| Reverse DCF (Sep 10) | [confirm tool] | Built the reverse DCF and Excel formulas | Qualified: placeholder CAPM inputs and 17.48% TTM cash margin; not used as evidence | Accenture_Reverse_DCF_Analysis.md L71-89 |
-| Peer comps (Sep 15-17) | AI partners | Proposed peer candidate names | Wrote the policy before search; opened every primary source; set aside Capgemini, Infosys, IBM | accenture_comps.md L19, L31 |
-| Lab 10 model (Sep 24) | Codex; Claude as review partner | Adapted the ABG engine; attacked the optimization assumption | Chose every assumption; kept $0 and disclosed the $173.44 case | accenture_proforma.py L319; ACN_Lab10.md L186-197 |
+| Edition A memo (Sep 3) | Codex and Claude  | Drafted the memo from my Lab 03 session | Gathered and verified sources; made the watch-defer call and wrote the triggers | ACN-2026-09-03.md L377 |
+| Reverse DCF (Sep 10) | Codex and Claude  | Built the reverse DCF and Excel formulas | Qualified: placeholder CAPM inputs and 17.48% TTM cash margin; not used as evidence | Accenture_Reverse_DCF_Analysis.md L71-89 |
+| Peer comps (Sep 15-17) | Codex and Claude  | Proposed peer candidate names | Wrote the policy before search; opened every primary source; set aside Capgemini, Infosys, IBM | accenture_comps.md L19, L31 |
+| Lab 10 model (Sep 24) | Codex and Claude  | Adapted the ABG engine; attacked the optimization assumption | Chose every assumption; kept $0 and disclosed the $173.44 case | accenture_proforma.py L319; ACN_Lab10.md L186-197 |
 | Lab 11 sensitivity (Sep 29) | Codex and Claude | Runner, tests, locked prediction (analyst-assisted) | Disclosed that the prediction was not mine; reconciled the miss | ACN_Lab11.md L22, L129 |
-| Edition B checks, release check, records, decks, scripts (Oct 8-18) | Claude (Anthropic) | ACN_EditionB_checks.py, cold_run.py, accenture_comps_pe.py; FY2026 source compilation; record templates; slide and script drafts | [Verified each FY2026 figure against the release, call transcript and 10-K; reviewed every slide claim] | ACN_FY2026_release_check.md L102 |
+| Edition B checks, release check, records, decks, scripts (Oct 8-18) | Codex and Claude  | ACN_EditionB_checks.py, cold_run.py, accenture_comps_pe.py; FY2026 source compilation; record templates; slide and script drafts | [Verified each FY2026 figure against the release, call transcript and 10-K; reviewed every slide claim] | ACN_FY2026_release_check.md L102 |
 | Edition B FCFF model and memo | [tool, or none] | [what it did] | [what I did] | [file] |
 | Edition B changed-input prediction | None (AI off) | None | Written and committed by me before the run | LOCKED_CHANGED_INPUT_RECORD.md; commit [hash] |
 
