@@ -1,0 +1,52 @@
+ACN EDITION B CHECKS -- built on accenture_proforma.py (Lab 10), not a replacement for it
+USD millions unless stated; per-share values in USD.
+
+1. BASE
+   Value per share: $182.00   cost of equity 10.56%   terminal growth 3.0%
+   Terminal value share of value: 70.7%
+
+2. BOUNDARY: terminal growth at or above cost of equity must be refused
+   g = 10.56%: BLOCKED -> PASS  (Require -100% < terminal growth < cost of equity)
+   g = 11.00%: BLOCKED -> PASS  (Require -100% < terminal growth < cost of equity)
+
+3. MONOTONICITY
+   Cost of equity  9.56%: $209.92   10.56%: $182.00   11.56%: $160.61
+   Higher discount rate -> lower value: PASS
+   FY27-30 growth  2.0%: $177.83   3.0%: $182.00   4.0%: $186.24
+   Higher growth -> higher value: PASS
+   Terminal growth 2.0%: $165.87   3.0%: $182.00   4.0%: $203.05
+   Higher terminal growth -> higher value: PASS
+
+4. GRID: value per share, cost of equity (rows) x terminal growth (columns)
+   Ke \ g      2.0%       3.0%       4.0%
+    9.56%  $  188.10  $  209.92  $  239.60
+   10.56%  $  165.87  $  182.00  $  203.05
+   11.56%  $  148.30  $  160.61  $  176.16
+   Every row rises with g: PASS
+
+5. DOWNSIDE AND BREAK-EVENS
+   Optimization $600M/yr FY27-30: $173.44
+   Lab 10 price $177.41 (Sept 24, 2026):
+     FY27-30 growth that equates value to price: 1.90%
+     Cost of equity that equates value to price: 10.75%
+     Terminal growth that equates value to price: 2.74%
+     Optimization cost/yr FY27-30 that equates value to price: $322M
+   Current price $229.68 (Oct 16, 2026):
+     FY27-30 growth that equates value to price: 13.39%
+     Cost of equity that equates value to price: 9.00%
+     Terminal growth that equates value to price: 4.94%
+     Optimization break-even: n/a (price is above base value even at $0)
+
+6. GUIDED FY27 ORGANIC GROWTH (Q4 FY26 call: 3-6% LC guide less 2-2.5% inorganic)
+   low (3% - 2.5%)          0.50% held FY27-30: $171.72
+   midpoint (4.5% - 2.25%)  2.25% held FY27-30: $178.87
+   high (6% - 2%)           4.00% held FY27-30: $186.24
+   Combined downside (2.25% growth AND $600M/yr optimization): $170.31
+
+7. MECHANICAL SENSITIVITIES (not a roll-forward: buyback cash, FY26 cash flows and timing are not updated)
+   FY26 revenue set to actual $74.18B (growth 6.47%): $186.18
+   Shares set to ~596M:                               $186.89
+   Both:                                              $191.18
+
+8. RESTORED BASE
+   Inputs restored: PASS   value matches first base within 1e-8: PASS   ($182.00)

@@ -1,0 +1,77 @@
+ACCENTURE LAB 11 - ONE-AT-A-TIME SENSITIVITY
+Fiscal years end August 31. Statement values: USD millions; per-share values: USD/share.
+Source model: accenture_proforma.py; inputs and rationale: ACN_Lab10.md.
+
+LOCKED PREDICTION (analyst judgment authorized by student before changed runs)
+Timestamp: 2026-09-29 20:32:38 UTC
+Input old -> new: FY2027E-FY2030E revenue growth: 3.0% to 4.0% each year (+1.0 percentage point); FY2026E stays 4.0%
+Expected outputs: FY2030E operating profit about $0.5 billion higher, FY2030E FCFE about $0.35 billion higher, and value about $5-$7 per share higher than base
+Reason: Higher organic revenue compounds for four years. At the model's positive gross margin it lifts operating profit; taxes, receivables net of deferred revenue, and capex absorb part of the FCFE increase. A higher final-year FCFE also raises terminal value. This is a pre-run analytical estimate, not an observed result.
+
+BASE INPUTS
+growth: FY2027E 3.00%, FY2028E 3.00%, FY2029E 3.00%, FY2030E 3.00%
+gross_margin: FY2026E 32.00%, FY2027E 32.00%, FY2028E 32.00%, FY2029E 32.00%, FY2030E 32.00%
+
+SENSITIVITY RESULTS (signed change from base)
+Driver / case | Input path | FY2030E operating profit | Change | FY2030E FCFE | Change | Value/share | Change | Checks
+---|---|---:|---:|---:|---:|---:|---:|---
+
+growth range: Analyst judgment anchored in ACN_Lab10.md: estimated organic growth was about 4% in FY2025 and about 2% in FY2026. Apply a uniform -1/+1 percentage-point shift to the 3% FY2027E-FY2030E base path; retain FY2026E guidance-based 4%. No acquisition spending is added.
+growth / lower | FY2027E 2.00%, FY2028E 2.00%, FY2029E 2.00%, FY2030E 2.00% | 12,658.2 | -517.9 | 9,453.9 | -274.7 | $177.83/share | -4.17 | PASS
+growth / base | FY2027E 3.00%, FY2028E 3.00%, FY2029E 3.00%, FY2030E 3.00% | 13,176.1 | +0.0 | 9,728.6 | +0.0 | $182.00/share | +0.00 | PASS
+growth / higher | FY2027E 4.00%, FY2028E 4.00%, FY2029E 4.00%, FY2030E 4.00% | 13,709.5 | +533.4 | 10,008.3 | +279.7 | $186.24/share | +4.24 | PASS
+growth span, Operating profit (USD millions): $1,051.3m
+growth span, FCFE (USD millions): $554.4m
+growth span, Value (USD/share): $8.40/share
+
+gross_margin range: Use Accenture's documented FY2023-FY2025 gross-margin history in ACN_Lab10.md: 31.9%-32.6%, against the model's 32.0% base. Apply each endpoint to all five forecast years. The asymmetric range is historical, and its width affects the span comparison.
+gross_margin / lower | FY2026E 31.90%, FY2027E 31.90%, FY2028E 31.90%, FY2029E 31.90%, FY2030E 31.90% | 13,132.9 | -43.2 | 9,693.0 | -35.6 | $181.34/share | -0.66 | PASS
+gross_margin / base | FY2026E 32.00%, FY2027E 32.00%, FY2028E 32.00%, FY2029E 32.00%, FY2030E 32.00% | 13,176.1 | +0.0 | 9,728.6 | +0.0 | $182.00/share | +0.00 | PASS
+gross_margin / higher | FY2026E 32.60%, FY2027E 32.60%, FY2028E 32.60%, FY2029E 32.60%, FY2030E 32.60% | 13,435.4 | +259.3 | 9,942.4 | +213.8 | $185.96/share | +3.96 | PASS
+gross_margin span, Operating profit (USD millions): $302.6m
+gross_margin span, FCFE (USD millions): $249.4m
+gross_margin span, Value (USD/share): $4.62/share
+Spans and signed changes use unrounded model values; displayed rows can differ by $0.01/share after rounding.
+
+ACCOUNTING CHECKS BY RUN AND YEAR (balance gap in USD millions)
+Driver / case | Year | Assets - liabilities - equity | Cash minimum | Revolver
+---|---|---:|---|---
+growth / lower | FY2026E | 0.0 | PASS | not drawn
+growth / lower | FY2027E | 0.0 | PASS | not drawn
+growth / lower | FY2028E | 0.0 | PASS | not drawn
+growth / lower | FY2029E | 0.0 | PASS | not drawn
+growth / lower | FY2030E | 0.0 | PASS | not drawn
+growth / base | FY2026E | 0.0 | PASS | not drawn
+growth / base | FY2027E | 0.0 | PASS | not drawn
+growth / base | FY2028E | 0.0 | PASS | not drawn
+growth / base | FY2029E | 0.0 | PASS | not drawn
+growth / base | FY2030E | 0.0 | PASS | not drawn
+growth / higher | FY2026E | 0.0 | PASS | not drawn
+growth / higher | FY2027E | 0.0 | PASS | not drawn
+growth / higher | FY2028E | 0.0 | PASS | not drawn
+growth / higher | FY2029E | 0.0 | PASS | not drawn
+growth / higher | FY2030E | 0.0 | PASS | not drawn
+gross_margin / lower | FY2026E | 0.0 | PASS | not drawn
+gross_margin / lower | FY2027E | 0.0 | PASS | not drawn
+gross_margin / lower | FY2028E | 0.0 | PASS | not drawn
+gross_margin / lower | FY2029E | 0.0 | PASS | not drawn
+gross_margin / lower | FY2030E | 0.0 | PASS | not drawn
+gross_margin / base | FY2026E | 0.0 | PASS | not drawn
+gross_margin / base | FY2027E | 0.0 | PASS | not drawn
+gross_margin / base | FY2028E | 0.0 | PASS | not drawn
+gross_margin / base | FY2029E | 0.0 | PASS | not drawn
+gross_margin / base | FY2030E | 0.0 | PASS | not drawn
+gross_margin / higher | FY2026E | 0.0 | PASS | not drawn
+gross_margin / higher | FY2027E | 0.0 | PASS | not drawn
+gross_margin / higher | FY2028E | 0.0 | PASS | not drawn
+gross_margin / higher | FY2029E | 0.0 | PASS | not drawn
+gross_margin / higher | FY2030E | 0.0 | PASS | not drawn
+
+TRACE: FY2030E base and changed statement links
+growth / lower: revenue=78,432.9; gross_profit=25,098.5; sga=11,796.3; depreciation=644.0; business_optimization=0.0; operating_income=12,658.2; net_income=9,673.4; capex=666.7; change_receivables=330.8; change_deferred_revenue=134.0; fcfe=9,453.9; cash=12,886.5; balance_gap=0.0
+growth / higher: revenue=84,767.8; gross_profit=27,125.7; sga=12,749.1; depreciation=667.2; business_optimization=0.0; operating_income=13,709.5; net_income=10,478.9; capex=720.5; change_receivables=701.2; change_deferred_revenue=284.0; fcfe=10,008.3; cash=13,928.7; balance_gap=-0.0
+gross_margin / lower: revenue=81,554.3; gross_profit=26,015.8; sga=12,227.4; depreciation=655.5; business_optimization=0.0; operating_income=13,132.9; net_income=10,034.6; capex=693.2; change_receivables=510.9; change_deferred_revenue=206.9; fcfe=9,693.0; cash=13,244.9; balance_gap=0.0
+gross_margin / higher: revenue=81,554.3; gross_profit=26,586.7; sga=12,495.7; depreciation=655.5; business_optimization=0.0; operating_income=13,435.4; net_income=10,284.0; capex=693.2; change_receivables=510.9; change_deferred_revenue=206.9; fcfe=9,942.4; cash=14,361.5; balance_gap=-0.0
+
+RESTORED BASE CHECK
+Inputs: PASS; outputs and linked rows: PASS; absolute tolerance 1e-8 USD millions or USD/share.

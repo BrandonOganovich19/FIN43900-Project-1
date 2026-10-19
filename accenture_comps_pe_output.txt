@@ -1,0 +1,37 @@
+--------------------------------------------------------------------
+COMPARABLE-COMPANY P/E ANALYSIS
+--------------------------------------------------------------------
+Target: Accenture plc (ACN)
+  Price per share:    240.94
+  Diluted EPS:        12.15
+  Current P/E:        19.830453x
+
+PEER MULTIPLES
+--------------------------------------------------------------------
+Ticker Company                         Price        EPS          P/E
+CTSH   Cognizant Technology            65.80       4.51   14.589800x
+EPAM   EPAM Systems                   142.38       7.84   18.160714x
+
+PEER MULTIPLE SUMMARY (2 usable peers)
+--------------------------------------------------------------------
+  Minimum P/E:        14.589800x
+  Median P/E:         16.375257x
+  Maximum P/E:        18.160714x
+
+IMPLIED VALUE FOR ACN (peer P/E x ACN diluted EPS of 12.15)
+--------------------------------------------------------------------
+  At minimum P/E:     $177.27
+  At median P/E:      $198.96
+  At maximum P/E:     $220.65
+
+  Implied range:      $177.27 - $220.65
+  Vs. actual price:   $240.94 (-41.98 at median)
+
+LEAVE-ONE-PEER-OUT SENSITIVITY
+--------------------------------------------------------------------
+Baseline median-implied price: $198.96
+
+Removed          Median-implied    Change vs. baseline
+CTSH                    $220.65                 +21.69  (reference estimate, no range)
+EPAM                    $177.27                 -21.69  (reference estimate, no range)
+--------------------------------------------------------------------
